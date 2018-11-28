@@ -33,9 +33,31 @@ $hosting 	= 'http://192.168.168.102/'
 		.header {
 			padding-top: 30px;
 		}
-		h1{
-			font-family: 'Bree Serif', serif;
+		@font-face {
+   	    	font-family: PincoyaBlack;
+    		src: url("landing/pincoyablack.otf") format("opentype");
 		}
+
+		@font-face {
+   	    	font-family: Gummy;
+    		src: url("landing/Gummy.ttf") format("opentype");
+		}
+
+		@font-face {
+   	    	font-family: GummyBook;
+    		src: url("landing/GummyBook.ttf") format("opentype");
+		}
+
+		h1{
+			font-family: 'Gummy';
+		}
+
+
+		p{
+			font-family:'PincoyaBlack';
+			font-size: 20px;
+		}
+
 	</style>
 </head>
 <body style="background-color: #2f2f2f">
@@ -52,7 +74,7 @@ $hosting 	= 'http://192.168.168.102/'
 						<div class="row header text-center">
 							<div class="col-md-12 col-sm-12">
 								<a href="<?php echo $hosting; ?>">
-									<h1 style="margin-top: 0px;">
+									<h1 class="tlt" style="margin-top: 0px;">
 										Adexe Server
 									</h1>
 								</a>
@@ -120,6 +142,7 @@ $hosting 	= 'http://192.168.168.102/'
 <script type="text/javascript" src="landing/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="landing/particles.min.js"></script>
 <script type="text/javascript">
+
 	$('#tableku').DataTable({
 		"dom": '<"pull-left"f>tip',
 		"paging": true,
@@ -130,6 +153,7 @@ $hosting 	= 'http://192.168.168.102/'
 		"info": false,
 		"autoWidth": false,
 	});
+	
 	function particle() {
 		particlesJS("particles-js", 
 		{
@@ -245,5 +269,6 @@ $hosting 	= 'http://192.168.168.102/'
 		});
 	}
 	particle();
+
 </script>
 </html>
